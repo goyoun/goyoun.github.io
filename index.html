@@ -35,7 +35,7 @@
             background-color: 	white;
         }
         footer {
-            background-color: #1F1F1F;
+            background-color: rgba(0, 0, 0, 0.030);
         }
         #titi {
             font-size: 60px;
@@ -54,23 +54,57 @@
         <div class="container d-flex align-items-center py-2">
             <ul class="nav flex-grow-1">
                 <li class="nav-item">
-                    <a href="#intro" class="nav-link text-light"> <font size="6px"> About me</a> </font>
+                    <a href="#intro" class="nav-link text-light"> <font size="5px"> About me</a> </font>
                 </li>
                 <li class="nav-item">
-                    <a href="#skills" class="nav-link text-light"><font size="6px">Skills</a></font>
+                    <a href="#skills" class="nav-link text-light"><font size="5px">Skills</a></font>
                 </li>
                 <li class="nav-item">
                     <!-- 해당 페이지 내에서 특정 영억으로 이동할때 .href 속성값에 id값을 주면 해당 영역으로 스크롤이동됨 -->
-                    <a href="#projects" class="nav-link text-light"><font size="6px">Projects</a></font>
+                    <a href="#projects" class="nav-link text-light"><font size="5px">Projects</a></font>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link text-light"> <font size="6px">Contact </a></font>
+                    <a href="#" class="nav-link text-light" onclick="location.href='./signup.html'"> <font size="5px">Contact </a></font>
                 </li>
             </ul>
             <div class="d-flex">
-                <input type="text" class="form-control" placeholder="Search"><font size="4px"></font>
-                <button class="btn btn-link text-light text-decoration-none flex-shrink-0" onclick="location.href='./signin.html'"><font size="5px">Sign in</button></font>
-                <button class="btn btn-outline-light flex-shrink-0" onclick="location.href='./signup.html'"><font size="5px">Sign up</button></font> 
+                <input type="text" class="form-control" style="margin-right: 5px" placeholder="Search">
+                <button type="button" class="btn btn-link text-light text-decoration-none flex-shrink-0" style="margin-right: 3px" data-bs-toggle="modal" data-bs-target="#exampleModal"><font size="5px">
+                    Sign in</font>
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title" id="exampleModalLabel">　로그인　</h3>
+                          <img class="left" src="./assets/brand/sun.svg" alt="" width="40" height="30">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="ID" style="margin-bottom: 4px;">
+                                <label for="floatingInput">ID</label>
+                              </div>
+                              <div class="form-floating">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                              </div>
+                              <div class="checkbox mb-3">
+                                <label>
+                                  <input type="checkbox" value="remember-me"> 자동 로그인
+                                </label>
+                              </div>
+                              <div>
+                              <button class="w-100 btn btn-lg btn-primary" type="button" onclick="location.href='./index.html'"> 로그인 </button>
+                              <button class="w-100 btn btn-lg btn-danger" style="margin-top:4px;" type="button"  data-bs-dismiss="modal"> 취소 </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                <button class="btn btn-link text-light text-decoration-none flex-shrink-0" onclick="location.href='./signup.html'"><font size="5px">Sign up</button></font> 
             </div>
             <!-- data-bs-target="#offcanvas": offcanvas에서 보여줄 내용(id가 offcanvas로 지정된 요소를 보여주겠다) -->
             <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
@@ -83,10 +117,18 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">About me</li>
-                        <li class="list-group-item">Skills</li>
-                        <li class="list-group-item">Projects</li>
-                        <li class="list-group-item">Contact</li>
+                        <li class="list-group-item">
+                            <a href="#intro" class="list-group text-dark text-decoration-none"> About me</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#skills" class="list-group text-dark text-decoration-none"> Skills</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#projects" class="list-group text-dark text-decoration-none"> Projects</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="list-group text-dark text-decoration-none" onclick="location.href='./signup.html'"> Contact</a>
+                        </li>
                     </ul>
                     <input type="text" class="form-control mb-2" placeholder="Search">
                     <!-- d-grid: 해당 요소를 한줄에 채워서 표시할 수 있음. -->
@@ -209,12 +251,12 @@
         <div class="container bg-light">
             <footer>
                 <div class="container bg-light">
-                    <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-6 border-left">
                         <div class="col-md-4 d-flex align-items-center">
                           <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
                             <svg class="bi" width="40" height="40"><use xlink:href="#bootstrap"/></svg>
                           </a>
-                          <span class="text-muted"><font size="6px">&copy; YounSung Ko</span></font>
+                          <span class="text-muted "><font size="6px">&copy; YounSung Ko</span></font>
                         </div>
                         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
                           <li class="ms-3"><a class="text-muted" href="https://github.com/goyoun"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
