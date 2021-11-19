@@ -88,7 +88,13 @@
             width: 5%;
         }
 
-        #post {
+        #sample6_detailAddress {
+            display: inline-block;
+            color:black;
+            width: 210px;
+            height : 48px;
+        }
+        #sample6_extraAddress {
             display: inline-block;
             color:black;
             width: 210px;
@@ -100,14 +106,14 @@
             width: 120px;
             height : 45px;
         }
-        #post2{
+        #sample6_address{
             display: inline-block;
             color:black;
             width: 425px;
             height : 48px;
             margin: 6px;
         }
-        #post3{
+        #sample6_postcode{
             display: inline-block;
             color:black;
             width: 300px;
@@ -281,25 +287,13 @@
     <div id="addId">
 
      <h3 style="margin-bottom:4px;">주소</h3>
-     <input class="form-control" type="text" id="post3" placeholder="우편번호" style="margin-bottom:0px;">
+     <input class="form-control" type="text" id="sample6_postcode" placeholder="우편번호" style="margin-bottom:0px;">
      <input class="form-control" type="button" id="post1" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
-     <input class="form-control" type="text" id="post2" placeholder="주소"><br>
-     <input class="form-control" type="text" id="post" placeholder="상세주소">
-     <input class="form-control" type="text" id="post" placeholder="참고항목">
-     
-     </div>
-     <div>
-        <button id="join" class="form-control bg-danger p-2 text-dark bg-opacity-50 m-auto" 
-        onclick="location.href='./index.html'" style="color: black; width: 30%;"> 가입하기</button>
-     </div>
-     
-     </div>
-    </div>
-    </div>
-    
-</div>
-</body>
-<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+     <input class="form-control" type="text" id="sample6_address" placeholder="주소"><br>
+     <input class="form-control" type="text" id="sample6_detailAddress" placeholder="상세주소">
+     <input class="form-control" type="text" id="sample6_extraAddress" placeholder="참고항목">
+
+     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
      <script>
          function sample6_execDaumPostcode() {
              new daum.Postcode({
@@ -349,4 +343,22 @@
              }).open();
          }
      </script>
+     
+     </div>
+
+     <div>
+        <button id="join" class="form-control bg-danger p-2 text-dark bg-opacity-50 m-auto" 
+        onclick="location.href='./index.html'" style="color: black; width: 30%;"> 가입하기</button>
+     </div>
+     
+     </div>
+    </div>
+    </div>
+    
+</div>
+
+
+</body>
+
+
 </html>
