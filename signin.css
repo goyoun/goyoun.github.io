@@ -20,6 +20,7 @@ body {
 
 .form-signin .checkbox {
   font-weight: 400;
+  border-radius: 1rem;
 }
 
 .form-signin .form-floating:focus-within {
