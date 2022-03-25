@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="../portfolio/bootstrap/bootstrap.css"> -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
-    
+    <link href="/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="/css/common.css" rel="stylesheet" type="text/css">
+    <link href="/css/signup.css" rel="stylesheet" type="text/css">
+    <script src="/js/join.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
-    <style>
+    <!-- <style>
         /* .ssize {
             width: 800px;
             height: 40px;
@@ -123,240 +123,93 @@
         #join {
             font-size: 30px;
         }
-    </style>
+    </style> -->
 
-    <script>
-        function idCheck(){
-            const exp = /^(?=.*[a-z])(?=.*\d)[a-z\d]{6,10}$/;
-            const exp1 = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,10}$/;
-            const exp2 = /^(?=.*[a-z])(?=.*\d)(?=.*[-_])[a-z\d-_]{5,20}$/; 
-
-            const id = document.getElementById('id').value;
-            const idResult = document.getElementById('idResult');
-            const idLength = id.length
-            if (id.match(exp)) {
-                console.log('유요한 형식')
-                idResult.innerHTML = '좋습니다';
-                idResult.style.color = 'green';
-
-            } else if(idLength == 0) {
-                idResult.innerHTML = '필수항목입니다';
-                idResult.style.color = 'red';
-            } else if(idLength < 5 || idLength >10) {
-                console.log('유효하지않은형식.')
-                idResult.innerHTML = '6~10자 내로 입력하세요';
-                idResult.style.color = 'red';
-            }
-        }
-        function password(){
-            const exp2 = /^(?=.*[a-z])(?=.*\d)(?=.*[-_!@#$%^&*()])[a-z\d-_!@#$%^&*()]{8,20}$/;
-            const passwordValue = document.getElementById('pw').value;
-            console.log('pw값 : ',passwordValue)
-            const passwordResult = document.getElementById('passwordResult');
-            console.log(passwordResult)
-            const passwordRegular = document.getElementById('passwordRegular')
-
-            console.log('입력password: ', passwordValue);
-            console.log(passwordValue.length);
-            
-            const passwordLength = passwordValue.length
-
-            if (passwordValue.match(exp2)) { // pw 입력값이 정규식을 만족하면
-                passwordResult.innerHTML = '좋습니다';
-                passwordResult.style.color = 'green';
-            }else if(passwordLength == 0 ) {
-                passwordResult.innerHTML = '필수항목입니다'; 
-                passwordResult.style.color = 'red';
-            } else {
-                passwordResult.innerHTML = '영문, 숫자, 특수문자를 사용하여 8~20자 이내로 작성해 주세요';
-                passwordResult.style.color = 'red';
-            }
-        }
-
-        function passwordCheck() {
-            const passwordValue = document.getElementById('pw').value;
-            const passwordValue2 = document.getElementById('pwCheck').value;
-            const passwordCheckResult = document.getElementById('passwordCheckResult');
-            
-             if(passwordValue == passwordValue2 ) {
-                passwordCheckResult.innerHTML = '일치합니다'
-                passwordCheckResult.style.color = 'green';
-             } else { 
-                passwordCheckResult.innerHTML = '일치하지않습니다'
-                passwordCheckResult.style.color = 'red';
-         }
-        }
-
-        function phoneCheck() {
-            const exp = /^\d{3}-\d{4}-\d{4}$/;
-            const phone = document.getElementById('phone').value;
-            const result = document.getElementById('phone-check-result');
-
-            if(phone.match(exp)) {
-                result.innerHTML = "확인 되었습니다."
-                result.style.color = "green";
-            } else {
-                result.innerHTML = "유효하지 않는 형식입니다"
-                result.style.color = "red";
-            }
-        }
-
-        function emailSelect() {
-            const domainSelect = document.getElementById('domainSelect').value;
-
-            const domain = document.getElementById('domain'); // 태그를 가져온다.
-            // select 에서 선택한 값을 domain id를 적용한 input 태그에 출력
-            // domain.value 에다가 domainSelect 를 대입한다.
-            domain.value = domainSelect;
-        }
-
-    </script>
+    
 </head>
 <!-- " style="background-color ;" -->
 <body>
-    <div class="container-xlg text-center bg-primary p-2 text-dark bg-opacity-25">
-    <div class="row" style="width: 100%">
+    <div class="box">
+        <div class="max_box">
+            <div class="mt_40 mb_40">
+                <form action="/join" method="post" id="joinForm">
     
-    <div class="flex-shrink-0">
-        <div class="flex-shrink-0">
-    <h3 id="id1">아이디</h3>
-    <input type='text' class="form-control" id="id" onblur="idCheck()" placeholder="영문소문자, 숫자 조합하여 6~20자이내" maxlength="20">
-    <br>
-    <span id="idResult" style="color:gray;"> </span> 
+                    <div class="mb_40 text_center">
+                        <p class="fs_24 fw_b">회원가입</p>
+                        <div class="title_bottom_line2 mt-3"></div>
+                    </div>
+                    <div class="input_box">
+                        <p class="input_label fs_16">아이디</p>
+                        <input type="text" id="memberEmail" class="input_text_2 fs_16" name="memberEmail" placeholder="5~20 사이의 영문 소문자와 숫자를 사용하여 입력하세요" onkeyup="mailDuplicateCheck()">
+                    </div>
+                    <p class="check_result" id="mailDuplicate"></p>
     
-    <div class="mb-2">
-    <h4 style="margin-bottom:4px;">비밀번호</h4>
-    <input type="password" id="pw" class="form-control" placeholder="영어 대,소문자,숫자,특수문자포함 8~20자리" onblur="password()" maxlength="20">
-    <br>
-    <span id="passwordResult" style="color: gray;"> </span>
+                    <div class="input_box">
+                        <p class="input_label fs_16">이메일</p>
+                        <input type="text" class="input_text_1 fs_16" id="memberCheckmail" name="memberCheckmail" placeholder="이메일을 입력하세요">
+                        <div class="input_btn_box mr_30">
+                        </div>
+                    </div>
+                    <p class="check_result" id="mailCheckStatus"></p>
+    
+                    <div class="input_box">
+                        <p class="input_label fs_16">비밀번호</p>
+                        <input type="password" class="input_text_2 fs_16" id="memberPw" name="memberPw" placeholder="8~16자 영문 대 소문자, 숫자를 사용하여 입력하세요" onkeyup="pw1check()">
+                    </div>
+                    <p class="check_result" id="pw1out"></p>
+    
+                    <div class="input_box">
+                        <p class="input_label fs_16">비밀번호 확인</p>
+                        <input type="password" class="input_text_2 fs_16" id="memberPwCheck" name="memberPwCheck" placeholder="비밀번호를 다시 입력하세요" onkeyup="pw2check()">
+                    </div>
+                    <p class="check_result" id="pw2out"></p>
+    
+                    <div class="input_box">
+                        <p class="input_label fs_16">닉네임</p>
+                        <input type="text" class="input_text_2 fs_16" id="memberNickname" name="memberNickname" placeholder="영문 대 소문자, 숫자, 특수문자('_')중에서 입력하세요" onkeyup="nicknameDuplicateCheck()">
+                    </div>
+                    <p class="check_result" id="nicknameDuplicate"></p>
+    
+                    <div class="input_box">
+                        <p class="input_label fs_16">전화번호</p>
+                        <select class="input_select fs_16" id="frontPhone">
+                            <option value="010">010</option>
+                            <option value="011">011</option>
+                            <option value="070">070</option>
+                            <option value="">직접입력</option>
+                        </select>
+                        <input type="text" class="input_text_9 fs_16" id="backPhone" name="backPhone" placeholder="'-' 없이 숫자만으로 핸드폰 번호를 입력하세요" onblur="pnCheck()">
+                    </div>
+                    <input type="hidden" id="memberPhone" name="memberPhone">
+                    <p class="check_result" id="pnOut"></p>
+    
+                    <div class="input_box">
+                        <p class="input_label fs_16">주소</p>
+                        <input class="input_text_4 fs_16" id="sample6_postcode" type="text" placeholder="우편번호"/>
+                        <div class="input_btn_box">
+                            <input class="input_btn fs_16" id="sample6_postcode" type="button"  onclick="sample6_execDaumPostcode()" value="우편번호" />
+                        </div>
+                    </div>
+                    <div class="input_box">
+                        <p class="input_label fs_16"></p>
+                        <input class="input_text_2 fs_16" type="text" id="sample6_address" placeholder="주소" onblur="address()"/>
+                    </div>
+                    <div class="input_box">
+                        <p class="input_label fs_16"></p>
+                        <input class="input_text_2 fs_16" type="text" id="sample6_detailAddress" placeholder="상세주소" onblur="address()"/>
+                    </div>
+                    <input type="hidden" id="sample6_extraAddress" placeholder="참고항목">
+                    <p class="check_result" id="addressOut"></p>
+    
+                    <div class="input_box mt_20">
+                        <p class="input_label fs_16"></p>
+                        <input class="long_btn signup_btn fs_16 fw_b" type="button" id="joinButton" onclick="joinSubmit()" value="가입하기" />
+                    </div>
+    
+                </form>
+            </div>
+        </div>
     </div>
-
-    <div class="mb-2">
-    <h4 style="margin-bottom:4px;">비밀번호 확인</h4>
-    <input type="password" id="pwCheck" placeholder="비밀번호를 한번더 입력해주세요" 
-    onblur="passwordCheck()" onkeyup="passwordCheck()" maxlength="20" class="form-control">
-    <br>
-    <span id="passwordCheckResult" style="color: gray;"> </span>
-    
-    </div> 
-
-    <div class="mb-2">
-    <h4 style="margin-bottom:4px;">전화번호</h4>
-    <input type="text" id="phone" onblur="phoneCheck()" class="form-control" placeholder=010-0000-0000>
-    <br>
-    <span id="phone-check-result"></span>
-    
-    </div>
-
-    <div class="mb-2">
-    <h4 style="margin-bottom:4px;">이메일</h4>
-    <input id="email"type="text" name="emailId" class="form-control" > @ <input type="text" id="domain" name="domain"class="form-control" >
-
-    <!-- <div class="input-group mb-3" id="domainSelect">
-        <input type="text" class="form-control" aria-label="Text input with dropdown button">
-        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">직접입력</button>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">naver.com</a></li>
-          <li><a class="dropdown-item" href="#">hanmail.net</a></li>
-          <li><a class="dropdown-item" href="#">gmail.com</a></li>
-          <li><a class="dropdown-item" href="#"></a></li>
-        </ul>
-      </div> -->
-
-
-    <select id = "domainSelect" onchange="emailSelect()" class="form-select"  style="width: 10%">
-    <option selected >직접입력</option>
-    <option value="naver.com" > naver.com </option>
-    <option value="hanmail.net"> hanmail.net</option>
-    <option value="hotmail.com">hotmail.com</option>
-    <option value="gmail.com">gmail.com</option>
-    </select>
-</div>
-<div id="sex">
-    <h4 style="margin-bottom:0px;">성별</h4>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-        <label class="form-check-label" for="inlineRadio1">남성</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-        <label class="form-check-label" for="inlineRadio2">여성</label>
-      </div>
-</div>
-
-    <div id="addId">
-
-     <h3 style="margin-bottom:4px;">주소</h3>
-     <input class="form-control" type="text" id="sample6_postcode" placeholder="우편번호" style="margin-bottom:0px;">
-     <input class="form-control" type="button" id="post1" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
-     <input class="form-control" type="text" id="sample6_address" placeholder="주소"><br>
-     <input class="form-control" type="text" id="sample6_detailAddress" placeholder="상세주소">
-     <input class="form-control" type="text" id="sample6_extraAddress" placeholder="참고항목">
-
-     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-     <script>
-         function sample6_execDaumPostcode() {
-             new daum.Postcode({
-                 oncomplete: function(data) {
-                     // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
-     
-                     // 각 주소의 노출 규칙에 따라 주소를 조합한다.
-                     // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-                     var addr = ''; // 주소 변수
-                     var extraAddr = ''; // 참고항목 변수
-     
-                     //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
-                     if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
-                         addr = data.roadAddress;
-                     } else { // 사용자가 지번 주소를 선택했을 경우(J)
-                         addr = data.jibunAddress;
-                     }
-     
-                     // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
-                     if(data.userSelectedType === 'R'){
-                         // 법정동명이 있을 경우 추가한다. (법정리는 제외)
-                         // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
-                         if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
-                             extraAddr += data.bname;
-                         }
-                         // 건물명이 있고, 공동주택일 경우 추가한다.
-                         if(data.buildingName !== '' && data.apartment === 'Y'){
-                             extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
-                         }
-                         // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
-                         if(extraAddr !== ''){
-                             extraAddr = ' (' + extraAddr + ')';
-                         }
-                         // 조합된 참고항목을 해당 필드에 넣는다.
-                         document.getElementById("sample6_extraAddress").value = extraAddr;
-                     
-                     } else {
-                         document.getElementById("sample6_extraAddress").value = '';
-                     }
-     
-                     // 우편번호와 주소 정보를 해당 필드에 넣는다.
-                     document.getElementById('sample6_postcode').value = data.zonecode;
-                     document.getElementById("sample6_address").value = addr;
-                     // 커서를 상세주소 필드로 이동한다.
-                     document.getElementById("sample6_detailAddress").focus();
-                 }
-             }).open();
-         }
-     </script>
-     
-     </div>
-
-     <div>
-        <button id="join" class="form-control bg-danger p-2 text-dark bg-opacity-50 m-auto" 
-        onclick="location.href='./index.html'" style="color: black; width: 30%;"> 가입하기</button>
-     </div>
-     
-     </div>
-    </div>
-    </div>
-    
-</div>
-
 
 </body>
 
