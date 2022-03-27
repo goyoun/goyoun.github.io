@@ -1,0 +1,60 @@
+.title {
+    color: #0ba376 !important;
+    margin-right: 5px !important;
+    margin-left: 30px !important;
+    font-weight: 600 !important;
+    font-size: 20px;
+    
+}
+
+.title1 {
+    color: #FFFFFF !important;
+    margin-right: 5px !important;
+    font-weight: 600 !important;
+    font-size: 20px;
+    
+}
+
+.value {
+    color: #ffffff !important;
+    font-weight: 400 !important;
+    font-size: 17px !important;
+}
+.contents {
+    color: #000000 !important;
+    font-weight: 300 !important;
+    font-size: 16px !important;
+}
+
+li {
+    list-style: none;
+}
+
+.headTitle {
+    color: #FFFFFF !important;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.fade-in {
+    animation: fadein 6s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.OtherKnowledges li {
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 3px;
+    color: #1f1f1f;
+    padding: 1px 10px;
+    margin: 3px 2px;
+    font-size: 17px;
+}

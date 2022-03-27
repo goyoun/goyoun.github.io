@@ -1,305 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KoYounSung</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="/css/common.css" rel="stylesheet" type="text/css">
-    <link href="/css/signup.css" rel="stylesheet" type="text/css">
-    <link href="/css/modal.css" rel="stylesheet" type="text/css"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
 
+    <title>Reflux HTML CSS Template</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-    <style>
-          * {
-            font-family: 'Dongle', sans-serif;
-        }
-        
-        header {
-            background-color: #1F1F1F;
-        }
-        #intro {
-            color: #1F1F1F;
-            background-color: 	white;
-        }
-        #skills {
-            background-color: 	white;
-            
-        }
-        #projects {
-            background-color: 	white;
-        }
-        footer {
-            background-color: rgba(0, 0, 0, 0.030);
-        }
-        #title_ft60 {
-            font-size: 60px;
-        }
-        #title_ft45 {
-            font-size: 45px;
-        }
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/span.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+  </head>
 
-        #title_ft30 {
-            font-size: 30px;
-        }
-        </style>
-
-</head>
-<body>
-    <!-- semantic tag 태그자체가 의미를 가진다 -->
-    <!-- 메뉴영역 -->
-    <header>
-        <!-- py-3 = 패딩을 y축으로 위아래 3px씩 -->
-        <div class="container d-flex align-items-center py-2">
-            <ul class="nav flex-grow-1">
-                <li class="nav-item">
-                    <a href="#intro" class="nav-link text-light"> <font size="5px"> About me</a> </font>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link text-light"><font size="5px">Skills</a></font>
-                </li>
-                <li class="nav-item">
-                    <!-- 해당 페이지 내에서 특정 영억으로 이동할때 .href 속성값에 id값을 주면 해당 영역으로 스크롤이동됨 -->
-                    <a href="#projects" class="nav-link text-light"><font size="5px">Projects</a></font>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-light" onclick="location.href='./signup.html'"> <font size="5px">Contact </a></font>
-                </li>
-            </ul>
-            <div class="d-flex">
-                
-                <button type="button" class="btn btn-link text-light text-decoration-none flex-shrink-0" style="margin-right: 3px" data-bs-toggle="modal" data-bs-target="#exampleModal"><font size="5px">
-                    Sign in</font>
-                </button>
-                  
-                  <!-- Modal -->
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h3 class="modal-title" id="exampleModalLabel">　로그인　</h3>
-                          <img class="left" src="./assets/brand/sun.svg" alt="" width="40" height="40">
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-floating">
-                                <input type="email" class="form-control" id="floatingInput" placeholder="ID" style="margin-bottom: 4px;">
-                                <label for="floatingInput">ID</label>
-                              </div>
-                              <div class="form-floating">
-                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                                <label for="floatingPassword">Password</label>
-                              </div>
-                              <div class="checkbox mb-3">
-                                <label>
-                                  <input type="checkbox" value="remember-me"> 자동 로그인
-                                </label>
-                              </div>
-                              <div>
-                              <button class="w-100 btn btn-lg btn-primary" type="button" onclick="location.href='./index.html'"> 로그인 </button>
-                              <button class="w-100 btn btn-lg btn-danger" style="margin-top:4px;" type="button" data-bs-dismiss="modal"> 취소 </button>
-                              </div>
-                      </div>
-                     </div>
-                   </div>
-                  </div>
-                <button class="btn btn-link text-light text-decoration-none flex-shrink-0" onclick="location.href='./signup.html'"><font size="5px">Sign up</button></font> 
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="assets/images/kys.png" alt="" /></a>
             </div>
-            <!-- data-bs-target="#offcanvas": offcanvas에서 보여줄 내용(id가 offcanvas로 지정된 요소를 보여주겠다) -->
-            <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
-                <img src="./images/menu.svg" alt="">
-            </button>
-            <!-- offcanvas로 보여줄 내용 -->
-            <div class="offcanvas offcanvas-end" id="offcanvas">
-                <div class="offcanvas-header">
-                    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <a href="#intro" class="list-group text-dark text-decoration-none"> About me</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#skills" class="list-group text-dark text-decoration-none"> Skills</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#projects" class="list-group text-dark text-decoration-none"> Projects</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#" class="list-group text-dark text-decoration-none" onclick="location.href='./signup.html'"> Contact</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="author-content">
+              <h4>Ko Youn Sung</h4>
+              <span>Web Developer</span>
             </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="#section0"> Home </a></li>
+                <li><a href="#section1">About Me</a></li>
+                <li><a href="#section2">Skills</a></li>
+                <li><a href="#section3">My Work</a></li>
+              </ul>
+            </nav>
+            <div class="social-network">
+              <ul class="soial-icons">
+                <li>
+                  <a href="https://fb.com/templatemo"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-rss"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright-text">
+              <p></p>
+            </div>
+          </div>
         </div>
-      
+      </div>
 
-    </header>
+      <section class="section Home" data-section="section0">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Home</h2>
+            <div class="line-dec"></div>
+            <span class="value">조언에 귀기울이며 항상 노력하며 발전 하겠습니다.</span>
+          </div>
+              <img class="fade-in" src="assets/images/portfolio.png" alt="" style="width:1000; height: 700px" />
+      </section>
 
-    <!-- 본문영역 -->
-    <section id="intro">
-
-        <div id= "main1" class="container text-center mt-5" >
-
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="1500">
-                    <img src="./images/001.png" class="d-block w-100" style="border-radius: 2rem" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <img src="./images/002.png" class="d-block w-100" style="border-radius: 2rem" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="1500">
-                    <img src="./images/003.png" class="d-block w-100" style="border-radius: 2rem" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+      <section class="section about-me" data-section="section1">
+        <div class="container">
+          <div class="section-heading">
+            <h2>About Me</h2>
+            <div class="line-dec"></div>
+            <span>요리사에서 개발자로 발돋움 중인 개발자 고윤성 입니다.</span>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <h2 class="headTitle"> 학력사항 </h2>
+                  <li>
+                    <span class="title"> > </span>
+                    <span class="value"> 정석항공공업고등학교 항공시설관리과 졸업 </span> <br>
+                    <span class="title"> > </span>
+                    <span class="value"> 수원과학대학교 산업경영과 졸업 </span>
+                  </li>
+                  <br>
+                  <h2 class="headTitle"> 교육이수 </h2>
+                  <li>
+                    <span class="title"> > 2021.09 ~ 2022.03 </span>
+                    <br>
+                    <span class="title"> > </span>
+                    <span class="value"> 인천일보아카데미 Java Backend 개발자 양성과정 수료</span>
+                  </li>
+                </div>              
               </div>
-
-            <h2> My Github <a href="https://github.com/goyoun" class="btn btn-dark my-3"><font size="px"><i class="fab fa-github fa-2x"></i></a></font></h2>
-           
             
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h2 class="headTitle"> PROFILE</h2>
+                    <li>
+                      <span class="title"> Name </span>
+                      <span class="value"> 고윤성(YounSung, Ko) </span>
+                    </li>
+                    <li>
+                      <span class="title"> BirthDate </span>
+                      <span class="value"> 1991.07.04 </span>  
+                    </li>
+                    <li>
+                      <span class="title"> Address </span>
+                      <span class="value"> 인천광역시 계양구 계산동 </span>  
+                    </li>
+                    <li>
+                      <span class="title"> E-mail </span>
+                      <span class="value"> qqqeee1234@naver.com </span>  
+                    </li>
+                    <li>
+                      <span class="title"> Phone </span>
+                      <span class="value">  +82 10 6651 1548 </span>  
+                    </li>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          <div class="right-image-post">
+            <div class="left-image-post">
+              <div class="row">
+                <div class="col-md-6">
+                  <!-- <div class="left-image"> -->
+                    <h2 class="headTitle"> Personal Project </h2>
+                    <li>
+                      <span class="title"> 2021.10.28 ~ 2021.10.31 </span> <br>
+                      <span class="title"> > </span>
+                      <span class="value"> Java를 이용한 간단한 정육점 POS 시스템 </span>
+                    </li>
+                    <br>
+                    <li>
+                      <span class="title"> 2021.11.17 ~ 2021.11.19 </span> <br>
+                      <span class="title"> > </span>
+                      <span class="value"> HTML,CSS,JS 를 이용한 Github.io 제작</span>
+                    </li>
+                    <br>
+                    <li>
+                      <span class="title"> 2021.12.10 ~ 2021.12.31 </span> <br>
+                      <span class="title"> > </span>
+                      <span class="value"> Spring Framework를 이용한 취미 공유 커뮤니티 게시판</span> <br>
+                    </li>
+                  <!-- </div>               -->
+                </div>
+              
+                <div class="col-md-6">
+                  <div class="right-text">
+                    <h2 class="headTitle"> Team Project</h2>
+                    <li>
+                      <span class="title"> 2022.02.07 ~ 2022.03.11 </span> <br>
+                      <span class="title"> > </span>
+                      <span class="value"> SpringBoot를 이용한 TeamProject.</span>
+                      <br>
+                      <span class="title"> > </span>
+                      <span class="value"> SNS & ShoppingMall을 결합한 웹페이지</span>
+                    </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+       </div>
+      </section>
+
+      <section class="section my-services" data-section="section2">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Skills</h2>
+            <div class="line-dec"></div>
+            <span>
+              
+              </span>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="progress-title">
+                  <h3>Java</h3>
+                  <div class="progress">
+                    <div class="progress-bar" style="width:65%; background:#ef2d56;">
+                    <div class="progress-value"> 60% </div>
+                  </div>
+                </div>
+                </div>
+                <li>
+                <span class="title1"> > </span>
+                <span class="value"> Java의 기초, 객체지향 언어의 기본적인 문법에 대해 알고 있습니다.</span>
+                </li>
+                <br><br>
+
+                <div class="progress-title">
+                  <h3>HTML/CSS</h3>
+                  <div class="progress">
+                    <div class="progress-bar" style="width:65%; background:#82b700;">
+                    <div class="progress-value"> 50% </div>
+                  </div>
+                </div>
+                </div>
+                <li>
+                  <span class="title1"> > </span>
+                  <span class="value"> 간단한 응용프로그램 작성이 가능합니다. </span>
+                  </li>
+                  <br>
+
+                  <div class="progress-title">
+                    <h3>JavaScript / J-Query</h3>
+                    <div class="progress">
+                      <div class="progress-bar" style="width:65%; background:plum;">
+                      <div class="progress-value"> 50% </div>
+                    </div>
+                  </div>
+                  </div>
+                  <li>
+                    <span class="title1"> > </span>
+                    <span class="value"> 기초적인 Web Application 제작이 가능합니다. </span>
+                    </li>
+                    <br>
+            </div>
+
+            <div class="col-md-6">
+              <div class="progress-title">
+                <h3>Spring Framework</h3>
+                <div class="progress">
+                  <div class="progress-bar" style="width:65%; background:#FF9900;">
+                  <div class="progress-value"> 65% </div>
+                </div>
+              </div>
+              </div>
+              <li>
+                <span class="title1"> > </span>
+                <span class="value"> Spring 웹 프로젝트 경험으로 SpringFramework의 전반적인 구조에 대해서 이해하고 있습니다.</span>
+                </li>
+                <br>
+
+                <div class="progress-title">
+                  <h3>MySQL</h3>
+                  <div class="progress">
+                    <div class="progress-bar" style="width:65%; background:#0ba376;">
+                    <div class="progress-value"> 50% </div>
+                  </div>
+                </div>
+                </div>
+                <li>
+                  <span class="title1"> > </span>
+                  <span class="value"> MySQL 개발시 사용가능 기본적인 코드 사용이 가능합니다.</span>
+                </li>
+            </div>
+
+            <div class="col-md-6">
+            <h1> Other Knowledges </h1>
+            <ul class="OtherKnowledges">
+            <li>Github</li>
+            <li>Gradle</li>
+            <li>TomCat</li>
+            <li>PostMan</li>
+            <li>Python</li>
+            <br>
+            <li>Java</li>
+            <li>J-query</li>
+            <li>JSP</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <br>
+            <li>MySQL</li>
+            </ul>
+            </div>
+            <div class="col-md-6">
+            <h1> IDE & Tool</h1>
+            <h3>> Intelli J IDEA</h3>
+            <h3>> Eclipse</h3>
+            <h3>> Visual Studio Code</h3>
+            <h3>> STS</h3>
+            <h3>> SpringBoot</h3>
+            </div>
+          </div>
         </div>
-        <br>
-        <br>
-        <br>
-    </section>
-<div class="container-lg" >
-    <section id="skills">
-        <div class="container" style="border:thick double #1f1f1f; border-radius:1rem;">
-            <div class="col-lg-12 text-center">
-                <h1 class="section-heading text-uppercase" id="title_ft60">Skills</h1>
-        
-            <div class="row">
-                <div class="col">
-                    <div class="col text-center" style="background-color: white">
-                        
-                        <br>
-                        <p id="title_ft60"> Language </p>
-                        <p id="title_ft45"> Java </p>
-                        <p id="title_ft45"> JavaScript </p>
-                        <p id="title_ft45"> HTML </p>
-                        <p id="title_ft45"> CSS </p>
-                        
-                    </div>
-                </div>
-                <div class="col text-center" style="background-color: white">
-                    <div>
-                        <br>
-                        <p id="title_ft60"> IDE </p>
-                        <p id="title_ft45"> Intelli J </p>
-                        <p id="title_ft45"> STS</p>
-                        <p id="title_ft45"> Visual Studio Code</p>
-                        <p id="title_ft45"> Eclipse</p>
-                    </div>
-                    </div>
-                    <div class="col text-center" style="background-color: white">
-                    <div>
-                        <br>
-                        <p id="title_ft60"> Other </p>
-                        <p id="title_ft45"> MySQL </p>
-                        <p id="title_ft45"> Other </p>
+      </section>
 
-                    </div>
+      <section class="section my-work" data-section="section3">
+        <div class="container">
+          <div class="section-heading">
+            <h2>My Project</h2>
+            <div class="line-dec"></div>
+            <span>Aenean sollicitudin ex mauris, lobortis lobortis diam euismod sit
+              amet. Duis ac elit vulputate, lobortis arcu quis, vehicula
+              mauris.</span>
+          </div>
+          <div class="row">
+            <div class="isotope-wrapper">
+              <form class="isotope-toolbar">
+                <label
+                  ><input
+                    type="radio"
+                    data-type="*"
+                    checked=""
+                    name="isotope-filter"
+                  />
+                  <span>all</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="people"
+                    name="isotope-filter"
+                  />
+                  <span>people</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="nature"
+                    name="isotope-filter"
+                  />
+                  <span>nature</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="animals"
+                    name="isotope-filter"
+                  />
+                  <span>animals</span></label
+                >
+              </form>
+              <div class="isotope-box">
+                <div class="isotope-item" data-type="nature">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/posmain.png"
+                      alt="sq-sample26"
+                      style="height:600px"
+                    />
+                    <figcaption>
+                      <a href="ppt/meatshop.html" target='_blank'>
+                      <i class="fa fa-search"></i> </a>
+                      <h4>First Project</h4>
+                      <span class="contents">Java만 사용한 정육점 POS 시스템</span>
+                    </figcaption>
+                  </figure>
                 </div>
 
-                    <br>
-                    <br>
+                <div class="isotope-item" data-type="people">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/hobbymain.png"
+                      alt="sq-sample26"
+                      style="height:600px"/>
+                    <figcaption>
+                      <a
+                        href="ppt/hobbyppt.html" target='_blank'><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Second Project</h4>
+                      <span class="contents">Spring을 이용한 취미공유 커뮤니티 게시판</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="animals">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/polaroid_main.png"
+                      alt="sq-sample26"
+                      style="height:600px"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/polaroid_main.png"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Item Third</h4>
+                      <span>customize anything</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="people">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-04.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-04.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Item Fourth</h4>
+                      <span>Re-distribution not allowed</span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
     
-            </div>
-            </div>
-        </div>
-    </section>
-</div>
 
-    <section id="projects">
-        <div class="container text-center mt-3 py-3">
-            <br>
-            <br>
-            <h1 id="title_ft60">Projects</h1>
-            <div class="row">
-                <div class="col-4"> 
-                    <h4 id="title_ft45" >  <a href="https://github.com/goyoun/goyoun1" class="text-dark text-decoration-none" > 정육점 포스 프로젝트 </h4> </a>
-                    <img class="rounded btn" style="width: 400px; height: 600px; cursor:pointer;" src="./images/tree.jpg" onclick="location.href='https://github.com/goyoun/goyoun1';">
-                    <p id="title_ft45">java를 이용한 수입,수출,매출 확인 포스</p>
-                    <p id="title_ft45">정육점 포스 시스템</p>
-                    <p id="title_ft30">개발기간 : 2021.10.28 ~ 2021.10.31 </p>
-                </div>
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                <div class="col-4">
-                    <h4 id="title_ft45">  <a href="https://github.com/goyoun/MyProject" class="text-dark text-decoration-none" > 취미 공유 커뮤니티 </h4> </a>
-                    <img class="rounded" style="width: 400px; height: 600px; cursor:pointer;" src="./images/main.png" onclick="location.href='https://github.com/goyoun/MyProject';">
-                    <p id="title_ft45"> Spring FrameWork 를 이용한</p>
-                    <p id="title_ft45"> 취미 공유 커뮤니티 게시판</p>
-                    <p id="title_ft30"> 개발기간 : 2021.12.10 ~ 2021.12.31</p>
-                </div>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
 
-                <div class="col-4">
-                    <h4 id="title_ft45"> POLAROID </h4>
-                    <img class="rounded" style="width: 400px; height: 600px;" src="./images/polaroid_main.png">
-                    <p id="title_ft45"> SpringBoot를 이용한</p>
-                    <p id="title_ft45">SNS & ShoppingMall</p>
-                    <p id="title_ft30"> 개발기간 : 2022.02.07 ~ 2022.03.11</p> 
-                </div>
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
 
-            </div>
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
 
-        </div>
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
 
-    </section>
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
 
-    <!-- 푸터영역 -->
-    <footer>
-        <div class="container bg-light">
-            <footer>
-                <div class="container bg-light">
-                    <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-6 border-left">
-                        <div class="col-md-4 d-flex align-items-center">
-                          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                            <svg class="bi" width="40" height="40"><use xlink:href="#bootstrap"/></svg>
-                          </a>
-                          <span class="text-muted "><font size="6px">&copy; YounSung Ko</span></font>
-                        </div>
-                        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                          <li class="ms-3"><a class="text-muted" href="https://github.com/goyoun"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                            </svg></a></li>
-                          <li class="ms-3"><a class="text-muted" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                            </svg></a></li>
-                          <li class="ms-3"><a class="text-muted" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
-                              <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
-                            </svg></a></li>
-                        </ul>
-                      </div>
-                </div>
-            </footer>
-        </div>
-    </footer>
-</body>
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+  </body>
 </html>
